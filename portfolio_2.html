@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manvendra Singh — Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+<div id="scroll-bar"></div>
+<div class="mouse-glow" id="mouseGlow"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-text">initializing...</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+  <div class="loader-pct" id="loaderPct">0%</div>
+</div>
+
+<!-- BACKGROUND -->
+<div class="bg-layer">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
+<div class="grid-overlay"></div>
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo">MS.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#skills" class="mobile-link">Skills</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="floating-icons">
+    <div class="ficon" style="top:15%;left:8%;--dur:6s;--del:0s">⚛️</div>
+    <div class="ficon" style="top:20%;right:10%;--dur:7s;--del:-2s">🟢</div>
+    <div class="ficon" style="top:65%;left:5%;--dur:5.5s;--del:-1s">🐋</div>
+    <div class="ficon" style="top:70%;right:8%;--dur:8s;--del:-3s">☁️</div>
+    <div class="ficon" style="top:40%;left:2%;--dur:6.5s;--del:-0.5s">🔷</div>
+    <div class="ficon" style="top:40%;right:2%;--dur:7.5s;--del:-1.5s">🍃</div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      available for work
+    </div>
+    <div class="hero-name">Manvendra Singh</div>
+    <h1 class="hero-title">
+      <span class="line1">Full Stack</span>
+      <span class="line2">Developer</span>
+    </h1>
+    <p class="hero-subtitle">Building scalable web experiences with modern technologies — from elegant UIs to robust backend systems.</p>
+    <div class="typing-wrap">
+      <span class="typing-text" id="typingText"></span><span class="cursor-blink">|</span>
+    </div>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+      <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">01 — About</div>
+  <div class="about-grid">
+    <div class="about-avatar-wrap fade-in">
+      <div class="about-avatar">
+        <div class="avatar-inner">👨‍💻</div>
+      </div>
+      <div class="avatar-badge">B.Tech CS — 2025</div>
+    </div>
+    <div class="about-text fade-in">
+      <h3>Hey, I'm <span class="highlight">Manvendra</span> 👋</h3>
+      <p>I'm a <span class="highlight">Full Stack Developer</span> passionate about crafting high-performance web applications with clean architecture and exceptional user experiences.</p>
+      <p>Specializing in <span class="highlight">Spring Boot</span>, <span class="highlight">React</span>, and <span class="highlight">Node.js</span>, I build products that scale. Currently pursuing my <span class="highlight">B.Tech in Computer Science</span> and actively exploring distributed systems, cloud infrastructure, and AI-powered applications.</p>
+      <p>When I'm not coding, I'm exploring prompt engineering, diving into competitive programming, or building the next big thing with the MERN stack.</p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="stat-num">10+</span>
+          <span class="stat-lbl">Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3+</span>
+          <span class="stat-lbl">Years Coding</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">15+</span>
+          <span class="stat-lbl">Technologies</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">02 — Skills</div>
+  <h2 class="section-title">Tech <span>Arsenal</span></h2>
+  <p class="section-sub" style="margin:0 auto 3.5rem;">A collection of tools and technologies I use to bring ideas to life.</p>
+  <div class="skills-grid">
+    <div class="skill-card fade-in" data-delay="0">
+      <div class="skill-icon">⚛️</div>
+      <div class="skill-name">React</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="92"></div></div>
+    </div>
+    <div class="skill-card fade-in" data-delay="50">
+      <div class="skill-icon">▲</div>
+      <div class="skill-name">Next.js</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+    </div>
+    <div class="skill-card fade-in" data-delay="100">
+      <div class="skill-icon">🟩</div>
+      <div class="skill-name">Node.js</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+    </div>
+    <div class="skill-card fade-in" data-delay="150">
+      <div class="skill-icon">☕</div>
+      <div class="skill-name">Spring Boot</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="87"></div></div>
+    </div>
+    <div class="skill-card fade-in" data-delay="200">
+      <div class="skill-icon">🍃</div>
+      <div class="skill-name">MongoDB</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div>
+    </div>
+    <div class="skill-card fade-in" data-delay="250">
+      <div class="skill-icon">🐘</div>
+      <div class="skill-name">PostgreSQL</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+    </div>
+    <div class="skill-card fade-in" data-delay="300">
+      <div class="skill-icon">🎨</div>
+      <div class="skill-name">Tailwind</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="94"></div></div>
+    </div>
+    <div class="skill-card fade-in" data-delay="350">
+      <div class="skill-icon">🔷</div>
+      <div class="skill-name">TypeScript</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="86"></div></div>
+    </div>
+    <div class="skill-card fade-in" data-delay="400">
+      <div class="skill-icon">🐋</div>
+      <div class="skill-name">Docker</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div>
+    </div>
+    <div class="skill-card fade-in" data-delay="450">
+      <div class="skill-icon">☁️</div>
+      <div class="skill-name">AWS</div>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">03 — Projects</div>
+  <h2 class="section-title">Featured <span>Work</span></h2>
+  <p class="section-sub">Real-world projects built with cutting-edge technologies and attention to detail.</p>
+  <div class="bento-grid">
+    <!-- Card 1 - Featured -->
+    <div class="project-card pc-1 fade-in" onclick="openModal('cineworld')">
+      <div class="proj-img">🎬</div>
+      <span class="proj-tag">Full Stack · Featured</span>
+      <div class="proj-title">CineWorld</div>
+      <div class="proj-desc">A global movie discovery platform powered by TMDB API. Features advanced search, user authentication, watchlists, and real-time recommendations with a stunning cinematic UI.</div>
+      <div class="proj-badges">
+        <span class="badge">React</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">MongoDB</span>
+        <span class="badge">TMDB API</span>
+        <span class="badge">JWT</span>
+      </div>
+      <div class="proj-links">
+        <a class="proj-btn primary" href="#" onclick="e=>e.stopPropagation()">Live Demo ↗</a>
+        <a class="proj-btn outline" href="#" onclick="e=>e.stopPropagation()">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">04 — Experience</div>
+  <h2 class="section-title">Career <span>Journey</span></h2>
+  <p class="section-sub">My professional timeline — building real-world impact through code.</p>
+  <div class="timeline">
+    <div class="tl-item fade-in">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-date">2025</div>
+        <div class="tl-role">Full Stack Web Development</div>
+        <div class="tl-company">JOVAC Course</div>
+        <div class="tl-desc">Underwent comprehensive training in frontend and backend development. Gained hands-on experience building scalable applications, culminating in a complete full-stack project built with JavaScript, React, and Node.js.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">05 — Contact</div>
+  <h2 class="section-title">Let's <span>Connect</span></h2>
+  <p class="section-sub" style="margin:0 auto 3rem;">Have a project in mind or want to collaborate? Drop me a message and let's build something extraordinary.</p>
+  <div class="contact-inner fade-in">
+    <div class="contact-form">
+      <div class="form-group">
+        <label class="form-label">Name</label>
+        <input class="form-input" type="text" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input class="form-input" type="email" placeholder="your@email.com">
+      </div>
+      <div class="form-group full">
+        <label class="form-label">Subject</label>
+        <input class="form-input" type="text" placeholder="Project collaboration, job opportunity...">
+      </div>
+      <div class="form-group full">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" placeholder="Tell me about your project or idea..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit()">Send Message →</button>
+    </div>
+    <div class="social-row">
+      <a class="social-link" href="https://github.com/Manvrndra955" target="_blank" rel="noopener" title="GitHub">💻</a>
+      <a class="social-link" href="https://www.linkedin.com/in/manvendra-pratap-singh-988326301/" target="_blank" rel="noopener" title="LinkedIn">💼</a>
+      <a class="social-link" href="mailto:manvendraprataps064@gmail.com" title="Email">📧</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">© 2025 Manvendra Singh · All rights reserved</div>
+  <div style="display:flex;gap:1rem;align-items:center;">
+    <a href="https://github.com/Manvrndra955" target="_blank" rel="noopener" style="color:var(--txt3);text-decoration:none;font-size:0.8rem;transition:color 0.3s;" onmouseover="this.style.color='var(--acc)'" onmouseout="this.style.color='var(--txt3)'">GitHub</a>
+    <span style="color:var(--border);font-size:0.7rem;">·</span>
+    <a href="https://www.linkedin.com/in/manvendra-pratap-singh-988326301/" target="_blank" rel="noopener" style="color:var(--txt3);text-decoration:none;font-size:0.8rem;transition:color 0.3s;" onmouseover="this.style.color='var(--acc)'" onmouseout="this.style.color='var(--txt3)'">LinkedIn</a>
+    <span style="color:var(--border);font-size:0.7rem;">·</span>
+    <a href="mailto:manvendraprataps064@gmail.com" style="color:var(--txt3);text-decoration:none;font-size:0.8rem;transition:color 0.3s;" onmouseover="this.style.color='var(--acc)'" onmouseout="this.style.color='var(--txt3)'">Email</a>
+  </div>
+  <div class="footer-right">Crafted with <span>♥</span> & lots of ☕</div>
+</footer>
+
+<!-- THEME TOGGLE -->
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
