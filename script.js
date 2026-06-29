@@ -142,7 +142,6 @@ document.querySelectorAll('.mobile-link').forEach(a => {
   a.addEventListener('click', () => document.getElementById('mobileNav').classList.remove('open'));
 });
 
-// MODAL
 const modalData = {
   cineworld: {
     title: 'CineWorld — Deep Dive',
@@ -168,6 +167,36 @@ const modalData = {
         <div style="display:flex;gap:0.8rem;">
           <a href="#" style="padding:0.6rem 1.3rem;background:linear-gradient(135deg,#7B2FF7,#A855F7);color:#fff;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;">Live Demo ↗</a>
           <a href="#" style="padding:0.6rem 1.3rem;background:transparent;color:#C4B5FD;border:1px solid rgba(168,85,247,0.3);border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;">GitHub</a>
+        </div>
+      </div>
+    `
+  },
+  fitness_tracker: {
+    title: 'Fitness-Tracker — Deep Dive',
+    content: `
+      <div style="margin-bottom:1.5rem;">
+        <div style="width:100%;height:180px;border-radius:12px;overflow:hidden;margin-bottom:1.5rem;border:1px solid rgba(168,85,247,0.2);position:relative;">
+          <img src="Screenshot 2026-06-29 165802.png" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:1;" alt="Fitness Tracker">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(123,47,247,0.3),transparent);z-index:2;pointer-events:none;"></div>
+        </div>
+        <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;margin-bottom:0.5rem;">Fitness-Tracker</div>
+        <div style="color:#C4B5FD;font-size:0.9rem;line-height:1.7;margin-bottom:1.2rem;">A comprehensive fitness tracking platform to monitor workouts, set health goals, and track daily progress. Features secure user authentication, personalized dashboard analytics, and a modern interactive UI.</div>
+        <div style="margin-bottom:1.2rem;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:#A855F7;letter-spacing:0.1em;margin-bottom:0.6rem;">KEY FEATURES</div>
+          <ul style="color:#C4B5FD;font-size:0.88rem;line-height:1.8;padding-left:1.2rem;">
+            <li>Secure authentication and authorization using JWT</li>
+            <li>Interactive workout builder and scheduler</li>
+            <li>Personalized dashboards tracking calories and logs</li>
+            <li>Progress history visualization and health goal setting</li>
+            <li>Responsive layouts for desktop, tablet, and mobile</li>
+          </ul>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.5rem;">
+          \${['React','Node.js','Express','MongoDB','JWT','Tailwind CSS','Vercel'].map(t=>\`<span style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;padding:0.3rem 0.7rem;background:rgba(123,47,247,0.12);color:#C084FC;border:1px solid rgba(168,85,247,0.25);border-radius:50px;">\${t}</span>\`).join('')}
+        </div>
+        <div style="display:flex;gap:0.8rem;">
+          <a href="https://fitness-tracker-omega-opal.vercel.app/" target="_blank" rel="noopener" style="padding:0.6rem 1.3rem;background:linear-gradient(135deg,#7B2FF7,#A855F7);color:#fff;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;">Live Demo ↗</a>
+          <a href="https://github.com/Manvrndra955/portfolio.git" target="_blank" rel="noopener" style="padding:0.6rem 1.3rem;background:transparent;color:#C4B5FD;border:1px solid rgba(168,85,247,0.3);border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;">GitHub</a>
         </div>
       </div>
     `
