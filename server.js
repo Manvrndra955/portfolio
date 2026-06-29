@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
   }
 
   let filePath = decodedUrl === '/' || decodedUrl === '/index.html'
-    ? path.join(PUBLIC_DIR, 'portfolio_2.html')
+    ? path.join(PUBLIC_DIR, 'index.html')
     : path.join(PUBLIC_DIR, decodedUrl);
 
   if (!filePath.startsWith(PUBLIC_DIR)) {
@@ -56,7 +56,7 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   console.log(`\nServer is successfully running at http://localhost:${PORT}`);
-  console.log('Serving portfolio_2.html as the home page.\n');
+  console.log('Serving index.html as the home page.\n');
   
   const start = (process.platform === 'darwin' ? 'open' : process.platform === 'win32' ? 'start' : 'xdg-open');
   require('child_process').exec(`${start} http://localhost:${PORT}`);
